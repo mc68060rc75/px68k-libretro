@@ -526,7 +526,7 @@ void retro_set_environment(retro_environment_t cb)
    environ_cb = cb;
 
    struct retro_variable variables[] = {
-      { "px68k_cpuspeed" , "CPU Speed; 10Mhz|16Mhz|25Mhz|33Mhz (OC)|66Mhz (OC)|100Mhz (OC)|150Mhz (OC)|200Mhz (OC)" },
+      { "px68k_cpuspeed" , "CPU Speed; 10Mhz|16Mhz|25Mhz|33Mhz (OC)|66Mhz (OC)|100Mhz (OC)|150Mhz (OC)|42Mhz (OC)" },
       { "px68k_ramsize" , "RAM Size (Restart); 2MB|3MB|4MB|5MB|6MB|7MB|8MB|9MB|10MB|11MB|12MB|1MB" },
       { "px68k_analog" , "Use Analog; OFF|ON" },
       { "px68k_joytype1" , "P1 Joypad Type; Default (2 Buttons)|CPSF-MD (8 Buttons)|CPSF-SFC (8 Buttons)" },
@@ -578,8 +578,8 @@ static void update_variables(void)
          clockmhz = 100;
       else if (strcmp(var.value, "150Mhz (OC)") == 0)
          clockmhz = 150;
-      else if (strcmp(var.value, "200Mhz (OC)") == 0)
-         clockmhz = 200;
+      else if (strcmp(var.value, "42Mhz (OC)") == 0)
+         clockmhz = 42;
    }
 
    var.key = "px68k_ramsize";
